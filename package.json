@@ -5,5 +5,16 @@
     "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.5",
     "validator": "^13.15.15"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "time": "node timeserver.js"
+  },
+  "name": "villatrix",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
