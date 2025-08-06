@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Villatrex</title>
+  <style>
+    body { background: #111; color: #eee; font-family: sans-serif; padding: 20px; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 10px; background: #222; color: #fff; border: 1px solid #555; }
+    button { padding: 10px 20px; background: #444; color: white; border: none; cursor: pointer; }
+    .status { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form id="contact-form">
+    <input type="text" id="subject" name="subject" placeholder="Subject" required />
+    <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div class="status" id="status"></div>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ subject, message })
+      });
+
+      const data = await res.json();
+      document.getElementById("status").innerText = data.message || data.error || "Unknown error.";
+    });
+  </script>
+</body>
+</html>

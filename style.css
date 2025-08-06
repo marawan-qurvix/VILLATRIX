@@ -1,0 +1,32 @@
+body {
+    background-color: red;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #222;
+    font-size: 36px;
+}
+
+p {
+    color: #555;
+    font-size: 20px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
