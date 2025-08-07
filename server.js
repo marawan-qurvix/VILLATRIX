@@ -19,7 +19,7 @@ app.post("/contact", async (req, res) => {
   const { subject, message } = req.body;
 
   // إيميل ثابت داخليًا (بيمثلك كمُرسل)
-  const email = "aboghareeb777@gmail.com";
+  const email = "marawangodey@gmail.com";
 
   if (!validator.isEmail(email)) {
     return res.status(400).json({ success: false, error: "Internal email is invalid." });
@@ -50,4 +50,5 @@ app.post("/contact", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Main server is running on http://localhost:${PORT}`);
 });
+
  
