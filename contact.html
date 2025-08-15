@@ -18,6 +18,7 @@
     <button type="submit">Send</button>
   </form>
   <div class="status" id="status"></div>
+  <a herf="index.html">⬅ back to home</a>
 
   <script>
     document.getElementById("contact-form").addEventListener("submit", async (e) => {
@@ -35,11 +36,9 @@
       document.getElementById("status").innerText = data.message || data.error || "Unknown error.";
     });
   </script>
-
-<a herf="index.html">⬅ back to home</a>
-
 </body>
 </html>
+
 
 
 
